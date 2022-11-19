@@ -43,7 +43,7 @@ class WelcomeFragment : Fragment() {
 
 
         binding.viewInstructionsButton.setOnClickListener {view:View ->
-            Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_welcomeFragment)
+            Navigation.findNavController(view).navigate(R.id.action_welcomeFragment_to_instructionsFragment)
 
 
         }

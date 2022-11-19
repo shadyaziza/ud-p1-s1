@@ -16,4 +16,13 @@
     <string name="welcome_to_our_shoe_store">Welcome to our shoe store</string>
     <string name="choose_from_our_stock_of_shoes">Choose from our stock of shoes</string>
     <string name="view_instructions">View Instructions</string>
+    <string name="get_started">Get Started</string>
+    <string name="todo">TODO</string>
+    <string name="_1_view_list_of_shoes">1. View list of shoes</string>
+    <string name="_2_add_new_shoe">2. Add new shoe</string>
+    <string name="add_new_shoe">Add new shoe</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_name">Shoe Name</string>
 </resources>
