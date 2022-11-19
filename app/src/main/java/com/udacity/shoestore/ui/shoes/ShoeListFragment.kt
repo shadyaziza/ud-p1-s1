@@ -44,18 +44,20 @@ class ShoeListFragment : Fragment() {
                 newList ->
 
 
+            if(newList.isNotEmpty()){
+                val lastShoe = newList.last()
 
-            val lastShoe = newList.last()
+                /// adding new TextView each time list is updated
+                val rootLayout: ViewGroup = binding.shoesListView
+                val myTextView = TextView(context)
+                myTextView.layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                )
+                myTextView.text="${lastShoe.name},${lastShoe.description},${lastShoe.size},${lastShoe.company}"
+                rootLayout.addView(myTextView)
 
-            /// adding new TextView each time list is updated
-            val rootLayout: ViewGroup = binding.shoesListView
-            val myTextView = TextView(context)
-            myTextView.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT,
-            )
-            myTextView.text="${lastShoe.name},${lastShoe.description},${lastShoe.size},${lastShoe.company}"
-            rootLayout.addView(myTextView)
+            }
 
         })
         /// Add one item to the list just to test if it is working
