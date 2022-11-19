@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/descriptionLabel2"
+            android:id="@+id/descriptionLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/add_new_shoe"
@@ -24,7 +24,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/shoeName2"
+            android:id="@+id/shoeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -34,7 +34,7 @@
             android:minHeight="48dp" />
 
         <EditText
-            android:id="@+id/shoeCompany2"
+            android:id="@+id/shoeCompany"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -45,7 +45,7 @@
             android:textColorHint="#546E7A" />
 
         <EditText
-            android:id="@+id/shoeDescription2"
+            android:id="@+id/shoeDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -56,7 +56,7 @@
             android:textColorHint="#546E7A" />
 
         <EditText
-            android:id="@+id/shoeSize2"
+            android:id="@+id/shoeSize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -64,5 +64,11 @@
             android:importantForAutofill="no"
             android:inputType="number"
             android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/addNewShoe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_shoe" />
     </LinearLayout>
 </ScrollView>

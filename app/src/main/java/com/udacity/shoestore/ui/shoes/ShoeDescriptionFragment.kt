@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentShoeDescriptionBinding
+import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import kotlinx.android.synthetic.main.fragment_shoe_description.view.*
 
 
 /**
@@ -14,7 +18,10 @@ import com.udacity.shoestore.R
  * create an instance of this fragment.
  */
 class ShoeDescriptionFragment : Fragment() {
+    private var _binding: FragmentShoeDescriptionBinding? = null
 
+    private val binding get() = _binding!!
+    private lateinit var viewModel: ShoeListViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -27,7 +34,18 @@ class ShoeDescriptionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shoe_description, container, false)
+        _binding= FragmentShoeDescriptionBinding.inflate(inflater, container, false)
+
+        binding.addNewShoe.setOnClickListener {view:View ->
+            viewModel.add(Shoe(
+                name = binding.shoeName.text.toString(),
+                description = binding.shoeName.descriptionLabel.toString(),
+                size = binding.shoeSize.text.toString().toInt(),
+                company = binding.shoeCompany.text.toString()
+            ))
+        }
+        return binding.root
+
     }
 
     companion object {
