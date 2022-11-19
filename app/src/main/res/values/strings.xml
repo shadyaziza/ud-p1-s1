@@ -11,4 +11,9 @@
     <string name="login_failed">"Login failed"</string>
     <string name="register">Register</string>
     <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_our_shoe_store">Welcome to our shoe store</string>
+    <string name="choose_from_our_stock_of_shoes">Choose from our stock of shoes</string>
+    <string name="view_instructions">View Instructions</string>
 </resources>
