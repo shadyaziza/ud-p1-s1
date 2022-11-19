@@ -40,26 +40,28 @@ class ShoeListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         /// setup observer
         /// This crash the application, why ??
-        viewModel.shoesList.observe(viewLifecycleOwner,Observer{
-                newList ->
 
-
-            if(newList.isNotEmpty()){
-                val lastShoe = newList.last()
-
-                /// adding new TextView each time list is updated
-                val rootLayout: ViewGroup = binding.shoesListView
-                val myTextView = TextView(context)
-                myTextView.layoutParams = LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                )
-                myTextView.text="${lastShoe.name},${lastShoe.description},${lastShoe.size},${lastShoe.company}"
-                rootLayout.addView(myTextView)
-
-            }
-
-        })
+        /// TODO: Uncomment this part
+//        viewModel.shoesList.observe(viewLifecycleOwner,Observer{
+//                newList ->
+//
+//
+//            if(newList.isNotEmpty()){
+//                val lastShoe = newList.last()
+//
+//                /// adding new TextView each time list is updated
+//                val rootLayout: ViewGroup = binding.shoesListView
+//                val myTextView = TextView(context)
+//                myTextView.layoutParams = LinearLayout.LayoutParams(
+//                    LinearLayout.LayoutParams.MATCH_PARENT,
+//                    LinearLayout.LayoutParams.MATCH_PARENT,
+//                )
+//                myTextView.text="${lastShoe.name},${lastShoe.description},${lastShoe.size},${lastShoe.company}"
+//                rootLayout.addView(myTextView)
+//
+//            }
+//
+//        })
         /// Add one item to the list just to test if it is working
 //        viewModel.add(Shoe(name = "Example Shoe", description = "Example Shoe Description", company = "Example company", size = 42))
 
